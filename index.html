@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,22 +10,63 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
     <!-- Personal JS link -->
+    <script src="assets/javascript/app.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" crossorigin="anonymous">
-    <!-- Personal CSS link -->
 
-    <title>Hello, world!</title>
+    <!-- Personal CSS link -->
+    <link href="assets/css/style.css">
+
+    <title>Gifs Ahoy!</title>
 
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container">
 
-    <div id="gifsGoHere"><div>
+        <div class="row">
 
+            <div class="col-md-8 col-sm-12 jumbotron header">
 
-    <button id="addNewButton">PRESS HERE TO ADD BUTTON </button>
+                <h1> Avengers, Assemble! </h1>
+
+                <h6> See your favorite Marvel heroes/villians come to life, through the omnipotent powers of "Gifs"</h3>
+
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+
+                <!-- "Add button", plus input field -->
+                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="input-group">
+                        <div class="input-group-text btn btn-primary" type="button" id="btnGroupAddon">Add</div>
+                        <input type="text" class="form-control" placeholder="Enter Marvel H/V Here" aria-label="Input group example">
+                    </div>
+                </div>
+
+                    <!-- buttons, old and new, go here! -->
+                <div class="btn-group" id="buttonsGoHere" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-warning">Captain America</button>
+                    <button type="button" class="btn btn-warning">Thor</button>
+                    <button type="button" class="btn btn-warning">The Hulk</button>
+                    <button type="button" class="btn btn-warning">Ironman</button>
+                    <!-- apppended buttons will (hopefully) be here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                <div id="gifsGoHere"></div>
+                <!-- remember to append the "ratings" for each gif -->
+            </div>
+
+        </div>
+
+    </div>
 
   </body>
 </html>

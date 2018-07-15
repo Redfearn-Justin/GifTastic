@@ -88,18 +88,23 @@ $(document).ready(function() {
               //setting multiple attributes for the gifs pulled from API
 
               charGif.attr( {
+
                   src: results[j].images.fixed_height_still.url,
                   'data-still': results[j].images.fixed_height_still.url,
                   'data-animate': results[j].images.fixed_height.url,
                   'data-state': "still",
                   class: "gif",
+
                 });
   
               gifDiv.prepend(charGif).append(ratingContainer);
   
               $("#gifsGoHere").prepend(gifDiv);
+
             }
+
         });
+
     }); 
 
     $("#gifsGoHere").on("click", ".gif", function() {
@@ -107,11 +112,19 @@ $(document).ready(function() {
         var state = $(this).attr("data-state");
 
         if (state === "still") {
+
           $(this).attr("src", $(this).attr("data-animate"));
+
           $(this).attr("data-state", "animate");
-        } else {
+
+        } 
+        
+        else {
+
           $(this).attr("src", $(this).attr("data-still"));
+
           $(this).attr("data-state", "still");
+
         }
 
     });
@@ -124,11 +137,3 @@ $(document).ready(function() {
     constructButtons();
 
 });
-
-
-//other notes
-
-// 2) Update README
-// 3) attach to Portfolio
-
-// IF FINISH EARLY: EDIT PAGE WITH CSS!! ADD SOUNDS? REFER TO OTHER BONUS OBJECTIVES

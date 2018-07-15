@@ -85,14 +85,34 @@ $(document).ready(function() {
   
               var charGif = $("<img>");
 
-              charGif.attr("src", results[j].images.fixed_height.url);
+              //setting multiple attributes for the gifs pulled from API
+
+              charGif.attr( {
+                  src: results[j].images.fixed_height_still.url,
+                  'data-still': results[j].images.fixed_height_still.url,
+                  'data-animate': results[j].images.fixed_height.url,
+                  'data-state': "still",
+                  class: "gif",
+                });
   
               gifDiv.prepend(charGif).append(ratingContainer);
   
               $("#gifsGoHere").prepend(gifDiv);
             }
-          });
+        });
+    }); 
 
+    $("#gifsGoHere").on("click", ".gif", function() {
+
+        var state = $(this).attr("data-state");
+
+        if (state === "still") {
+          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("data-state", "animate");
+        } else {
+          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("data-state", "still");
+        }
 
     });
 
@@ -100,15 +120,10 @@ $(document).ready(function() {
     //function calls
 
     //to initialize page with buttons
+
     constructButtons();
 
-    
-    //on click function so when user clicks on a gif, it animates
-        //!!!! gifs should not automatically load upon load!!
-        //if clicked again, should stop gif
-
-
-}); //document ready function
+});
 
 
 //other notes

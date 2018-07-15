@@ -1,0 +1,25 @@
+h1 {
+    font-family: 'Bangers', cursive, 'Courier New', Courier, monospace;
+}
+
+p {
+    color: white;
+    font-family: 'Permanent Marker', cursive, 'Courier New', Courier, monospace;
+}
+
+#gifHolder {
+    margin-top: 2%;
+    margin-left: 2%;
+    padding-top: 2%;
+}
+
+.charButtons {
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+body {
+    margin:2%;
+    background-image: url('../images/background.jpg');
+}

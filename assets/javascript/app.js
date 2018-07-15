@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     function constructButtons() {
 
-        //this will empty button(s) to prevent uploading twice
+        //empty button(s) to prevent uploading twice
         $("#buttonsGoHere").empty();
 
         // Looping through the array of movies
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
             // Altering attributes of generateButton
 
-            generateButton.addClass("btn btn-outline-danger charButtons");
+            generateButton.addClass("btn btn-danger charButtons");
 
             generateButton.attr("data-name", topics[j]);
 
@@ -38,6 +38,14 @@ $(document).ready(function() {
         console.log("button pressed");
 
         var newRequest = $("#charRequest").val().trim();
+
+        // if user should attempt to add a blank field, below conditional will prevent that
+
+        if ( $("#charRequest").val() === "") {
+
+          return null;
+
+        }
 
         //verifying new character has been registered
 

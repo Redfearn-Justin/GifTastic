@@ -15,10 +15,13 @@
     <script src="assets/javascript/app.js"></script>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+    <!-- Google Fonts CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Permanent+Marker" rel="stylesheet">
 
     <!-- Personal CSS link -->
-    <link href="assets/css/style.css">
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <title>Gifs, Assemble!</title>
 
@@ -30,9 +33,11 @@
 
             <div class="col-md-8 col-sm-12 jumbotron header">
 
-                <h1> Avengers, Assemble! </h1>
+                <h1 class="display-4"> Avengers, Assemble! </h1>
 
-                <h6> See your favorite Marvel heroes/villians come to life, through the omnipotent power of "Gifs"</h3>
+                <br>
+
+                <h6 class="lead"> See your favorite Marvel heroes/villains come to life, through the omnipotent power of "Gifs"</h3>
 
             </div>
 
@@ -53,9 +58,9 @@
 
         <div class="row">
 
-            <div class="col-md-12 col-sm-12">
+            <div class="col-md-12 col-sm-12" id="gifHolder">
+                <!-- Gifs go here -->
                 <div id="gifsGoHere"></div>
-                <!-- remember to append the "ratings" for each gif -->
             </div>
 
         </div>
